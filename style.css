@@ -1,0 +1,1090 @@
+/* ================= ULTRA PREMIUM HERO ================= */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+/* Active slide visible */
+.slide.active {
+    opacity: 1;
+}
+
+/* Slide images */
+.slide:nth-child(1) {
+    background-image: url('https://images.pexels.com/photos/35378573/pexels-photo-35378573.jpeg');
+}
+
+.slide:nth-child(2) {
+    background-image: url('https://images.pexels.com/photos/29194911/pexels-photo-29194911.jpeg');
+}
+
+.slide:nth-child(3) {
+    background-image: url('https://images.pexels.com/photos/34885365/pexels-photo-34885365.jpeg');
+}
+
+/* Overlay gradient + vignette */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.65)),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.75));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    z-index: 2;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Content */
+.hero-content {
+    color: white;
+    max-width: 320px;
+    animation: fadeUp 1.8s ease forwards;
+}
+
+/* Top small text */
+.top-text {
+    font-size: 11px;
+    letter-spacing: 4px;
+    opacity: .8;
+    text-transform: uppercase;
+}
+
+/* Main name */
+.couple-name {
+    font-size: 34px;
+    margin: 15px 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.couple-name span {
+    color: #D4AF37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, .6);
+}
+
+/* Date */
+.date {
+    font-size: 13px;
+    letter-spacing: 2px;
+    opacity: .9;
+}
+
+/* Animated gold divider */
+.gold-divider {
+    width: 90px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #D4AF37, transparent);
+    margin: 18px auto;
+    animation: goldPulse 3s infinite alternate;
+}
+
+@keyframes goldPulse {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Islamic ornament lines */
+.ornament-top,
+.ornament-bottom {
+    width: 60px;
+    height: 2px;
+    background: #D4AF37;
+    margin: 15px auto;
+    opacity: .6;
+}
+
+/* Slow cinematic zoom */
+@keyframes slowZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+/* Fade up animation */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Wave bottom */
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 3;
+}
+
+/* ================= LOVE SECTION LUXURY ================= */
+
+.love-section {
+    padding: 140px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle glowing background */
+.love-section::before {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.08), transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* Inner container */
+.love-inner {
+    max-width: 650px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Icon wrapper */
+.icon-love {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Icon image */
+.icon-love img {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+    opacity: .9;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(32%) saturate(520%) hue-rotate(356deg) brightness(95%) contrast(90%);
+}
+
+/* Title */
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #1c1c1c;
+}
+
+/* Elegant divider */
+.gold-divider {
+    width: 100px;
+    height: 1px;
+    margin: 30px auto 50px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+/* Quote */
+.quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 2;
+    color: #444;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+/* Ayat */
+.ayat {
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b08d57;
+}
+
+/* ================= COUPLE SECTION ================= */
+
+.couple-section {
+    background: var(--cream);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.couple-section .container {
+    max-width: 420px;
+    margin: auto;
+}
+
+.gold-divider {
+    width: 80px;
+    height: 2px;
+    margin: 20px auto 50px;
+    background: linear-gradient(to right, transparent, var(--champagne), transparent);
+}
+
+/* Profile Card */
+.profile-card {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 150px;
+    /* sedikit lebih besar biar frame terlihat */
+    height: 150px;
+    margin: 0 auto 20px;
+}
+
+/* Frame dari Canva */
+.frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* Foto */
+.avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 125px;
+    /* lebih kecil dari frame */
+    height: 125px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Name */
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--emerald);
+    margin-bottom: 8px;
+}
+
+/* Parent text */
+.parent {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.btn-ig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto;
+    /* Biar center */
+    border: 1px solid var(--champagne);
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+/* Icon */
+.btn-ig img {
+    width: 18px;
+    height: 18px;
+    transition: 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(12%) saturate(800%) hue-rotate(120deg) brightness(90%) contrast(90%);
+}
+
+/* Hover effect - GOLD */
+.btn-ig:hover {
+    background: var(--champagne);
+    box-shadow: 0 4px 15px rgba(212, 176, 106, 0.4);
+}
+
+.btn-ig:hover img {
+    filter: brightness(0) invert(1);
+    /* Icon jadi putih saat hover */
+}
+
+/* Ampersand */
+.ampersand {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: var(--champagne);
+    margin: 10px 0 30px;
+}
+
+/* ================= COUNTDOWN SECTION ================= */
+
+.countdown-section {
+    background: var(--emerald);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.countdown-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+/* Container */
+.countdown-section .container {
+    max-width: 420px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* CARD WRAPPER - DOUBLE BORDER + INNER GLOW */
+.countdown-card {
+    position: relative;
+    padding: 45px 25px 55px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(212, 176, 106, 0.5);
+    /* outer border */
+    box-shadow:
+        0 0 0 4px rgba(212, 176, 106, 0.15),
+        /* second border */
+        inset 0 0 25px rgba(212, 176, 106, 0.08),
+        /* inner glow */
+        0 20px 40px rgba(0, 0, 0, 0.25);
+    /* depth */
+
+    overflow: hidden;
+}
+
+/* Shimmer overlay */
+.countdown-card::before {
+    content: "";
+    position: absolute;
+    top: -150%;
+    left: -50%;
+    width: 200%;
+    height: 300%;
+    background: linear-gradient(120deg,
+            transparent 40%,
+            rgba(255, 255, 255, 0.05) 50%,
+            transparent 60%);
+    transform: rotate(25deg);
+    animation: shimmer 8s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(25deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(25deg);
+    }
+}
+
+/* Title */
+.section-title.light {
+    color: var(--cream);
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Divider */
+.gold-divider {
+    width: 80px;
+    height: 2px;
+    margin: 20px auto 40px;
+    background: linear-gradient(to right, transparent, var(--champagne), transparent);
+}
+
+/* Countdown grid */
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Time box */
+.time-box {
+    padding: 18px 10px;
+    border: 1px solid rgba(212, 176, 106, 0.3);
+    background: rgba(255, 255, 255, 0.02);
+    transition: 0.3s ease;
+}
+
+/* Number */
+.time-box span {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--champagne);
+    font-family: 'Playfair Display', serif;
+}
+
+/* Label */
+.time-box small {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--cream);
+    opacity: .8;
+}
+
+/* Hover */
+.time-box:hover {
+    background: rgba(212, 176, 106, 0.08);
+    transform: translateY(-3px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    .countdown-section {
+        padding: 80px 15px;
+    }
+
+    .countdown-section .container {
+        max-width: 100%;
+    }
+
+    .countdown-card {
+        padding: 35px 20px 45px;
+    }
+
+    .section-title.light {
+        font-size: 26px;
+    }
+
+    .countdown {
+        gap: 10px;
+    }
+
+    .time-box span {
+        font-size: 20px;
+    }
+
+    .time-box small {
+        font-size: 10px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .countdown-section {
+        padding: 70px 15px;
+    }
+
+    .section-title.light {
+        font-size: 22px;
+    }
+
+    .gold-divider {
+        margin: 15px auto 30px;
+    }
+
+    /* jadi 2 kolom biar tidak sempit */
+    .countdown {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .time-box {
+        padding: 15px 8px;
+    }
+
+    .time-box span {
+        font-size: 18px;
+    }
+
+    .time-box small {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+}
+
+/* ================= WEDDING EVENT SECTION ================= */
+
+.section-cream {
+    background: var(--cream);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-cream .container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Divider */
+.gold-divider {
+    width: 80px;
+    height: 2px;
+    margin: 20px auto 50px;
+    background: linear-gradient(to right, transparent, var(--champagne), transparent);
+}
+
+/* ================= WRAPPER ================= */
+
+.event-wrapper {
+    display: grid;
+    gap: 40px;
+}
+
+/* ================= CARD ================= */
+
+.event-card {
+    position: relative;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+/* Dark overlay for readability */
+.event-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.55));
+    color: #fff;
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Event title */
+.event-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Gold line */
+.event-line {
+    width: 60px;
+    height: 2px;
+    margin: 15px auto 25px;
+    background: linear-gradient(to right, transparent, var(--champagne), transparent);
+}
+
+/* Detail text */
+.event-detail p {
+    font-size: 14px;
+    margin: 6px 0;
+    letter-spacing: 1px;
+}
+
+/* ================= MAP BUTTON ================= */
+
+.btn-map {
+    margin-top: 25px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid var(--champagne);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    border-radius: 50px;
+}
+
+.btn-map img {
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(78%) sepia(33%) saturate(428%) hue-rotate(356deg) brightness(92%) contrast(88%);
+}
+
+.btn-map:hover {
+    background: var(--champagne);
+}
+
+.btn-map:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (min-width: 768px) {
+    .event-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ================= GALLERY SECTION ================= */
+
+.section-brown {
+    background: var(--emerald);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.gallery-section .container {
+    max-width: 450px;
+    margin: auto;
+}
+
+/* Title */
+.section-title.light {
+    color: var(--cream);
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+/* Divider */
+.gold-divider {
+    width: 80px;
+    height: 2px;
+    margin: 20px auto 50px;
+    background: linear-gradient(to right, transparent, var(--champagne), transparent);
+}
+
+/* ================= GALLERY GRID ================= */
+
+.top-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--cream);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 100%);
+}
+
+.gallery {
+    column-count: 2;
+    /* jadi 2 kolom seperti contoh */
+    column-gap: 15px;
+}
+
+/* Foto */
+.gallery img {
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    display: block;
+    break-inside: avoid;
+    transition: 0.4s ease;
+}
+
+/* Hover zoom halus */
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* ================= RSVP CARD ================= */
+
+/* RSVP Card */
+.rsvp-card {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.rsvp input,
+.rsvp textarea,
+.rsvp select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.rsvp textarea {
+    resize: none;
+    height: 90px;
+}
+
+.btn-gold {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #d4af37;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-gold:hover {
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+}
+
+/* ================= COMMENT LIST SMALL ================= */
+
+.comment-list {
+    max-width: 520px;
+    margin: 45px auto 20px;
+    padding: 0 15px;
+}
+
+.comment-item {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 18px 20px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    text-align: left;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: 0.3s ease;
+}
+
+.comment-item h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.comment-item p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Badge */
+.comment-item span {
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.badge-hadir {
+    background: #1f6f4a;
+    color: white;
+}
+
+.badge-insya {
+    background: #d4af37;
+    color: white;
+}
+
+.badge-tidak {
+    background: #9e9e9e;
+    color: white;
+}
+
+/* Load More Button */
+.btn-load {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 28px;
+    border-radius: 30px;
+    border: 1px solid #d4af37;
+    background: transparent;
+    color: #b08d57;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.btn-load:hover {
+    background: #d4af37;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .comment-list {
+        max-width: 100%;
+        margin: 35px auto 15px;
+    }
+
+    .comment-item {
+        padding: 14px 16px;
+        border-radius: 12px;
+    }
+
+    .comment-item h4 {
+        font-size: 13px;
+    }
+
+    .comment-item p {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .comment-item span {
+        font-size: 9px;
+        padding: 2px 7px;
+    }
+}
+
+/* ================= ENVELOPE CREAM ================= */
+
+.section-cream {
+    background: var(--cream);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* ================= COUPLE PHOTO ================= */
+
+.couple-photo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.couple-photo img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+.couple-photo img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= ENVELOPE LUXURY ================= */
+
+.envelope-section {
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.envelope-wrapper {
+    max-width: 600px;
+    margin: 60px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Bank Box */
+.bank-box {
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.bank-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.bank-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.bank-img {
+    width: 40px;
+    height: auto;
+}
+
+.bank-header span {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b08d57;
+}
+
+/* Account number */
+.bank-number {
+    font-size: 22px;
+    letter-spacing: 3px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bank-name {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* Copy button */
+.btn-copy {
+    padding: 12px 28px;
+    border-radius: 40px;
+    border: 1px solid #d4af37;
+    background: transparent;
+    color: #b08d57;
+    font-size: 13px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-copy:hover {
+    background: #d4af37;
+    color: white;
+}
+
+/* =========================
+   LEAF FALL PREMIUM
+========================= */
+.leaves {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.leaf {
+    position: absolute;
+    top: -10%;
+    width: 28px;
+    opacity: .7;
+    animation: fall linear infinite;
+}
+
+.leaf svg {
+    width: 100%;
+    height: auto;
+    fill: var(--champagne);
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) translateX(0px) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(25vh) translateX(20px) rotate(90deg);
+    }
+
+    50% {
+        transform: translateY(50vh) translateX(-20px) rotate(180deg);
+    }
+
+    75% {
+        transform: translateY(75vh) translateX(15px) rotate(270deg);
+    }
+
+    100% {
+        transform: translateY(110vh) translateX(-15px) rotate(360deg);
+    }
+}
+
+.spin-slow {
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= LUXURY FOOTER ================= */
+
+.luxury-footer {
+    padding: 20px;
+    text-align: center;
+    background: #f8f6f1;
+    position: relative;
+}
+
+.footer-line {
+    width: 78px;
+    height: 2px;
+    margin: 0px auto 8px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+/* Text */
+.footer-text {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #aaa;
+}
+
+.footer-text span {
+    color: #d4af37;
+    font-weight: 500;
+}
