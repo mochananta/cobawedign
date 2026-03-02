@@ -2,9 +2,8 @@
 <html lang="id">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Wedding Invitation</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -15,109 +14,111 @@
 
   <style>
     body {
-      background-color: #f3e2fc;
-      font-family: 'Inter', sans-serif;
       margin: 0;
+      font-family: 'Inter', sans-serif;
     }
 
     .font-title {
       font-family: 'Playfair Display', serif;
     }
   </style>
-
 </head>
 
-<body class="overflow-hidden bg-[#f3e2fc]">
+<body class="flex justify-center">
 
-  <section id="cover" class="fixed inset-0 flex items-center justify-center z-50">
-    <div class="w-full max-w-[480px] aspect-[9/16] relative shadow-2xl rounded-3xl overflow-hidden">
+  <!-- WRAPPER (BIAR DESKTOP TIDAK FULL LEBAR) -->
+  <div class="w-full max-w-[430px] bg-gradient-to-br from-purple-200 to-pink-200 relative shadow-2xl">
 
-      <!-- VIDEO -->
-      <video autoplay muted loop playsinline class="w-full h-full object-cover">
-        <source src="Untitled design.mp4" type="video/mp4">
-      </video>
+    <!-- ================= COVER ================= -->
+    <section id="cover" class="absolute inset-0 z-50">
 
-      <!-- Overlay -->
-      <div class="absolute inset-0"></div>
+      <div class="relative w-full min-h-screen overflow-hidden">
 
-      <!-- Content -->
-      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+        <!-- VIDEO -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+          <source src="Untitled design.mp4" type="video/mp4">
+        </video>
 
-        <p class="uppercase tracking-[4px] text-white text-xs mb-6">
-          The Wedding Of
-        </p>
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/10"></div>
 
-        <h1 class="font-title text-4xl text-white mb-8 drop-shadow-lg">
-          Ardi & Nabila
-        </h1>
+        <!-- Content -->
+        <div class="relative z-10 flex flex-col items-center justify-center text-center px-6 min-h-screen">
 
-        <!-- CARD -->
-        <div class="bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl px-8 py-10 text-center shadow-xl">
-
-          <p class="text-white text-sm mb-2 tracking-wide">
-            Kepada Yth.
+          <p class="uppercase tracking-[4px] text-white text-xs mb-6">
+            The Wedding Of
           </p>
 
-          <p class="text-white text-lg font-medium mb-6">
-            Tamu Undangan
-          </p>
+          <h1 class="font-title text-4xl text-white mb-8 drop-shadow-lg">
+            Ardi & Nabila
+          </h1>
 
-          <button id="openBtn"
-            class="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-purple-700 font-medium shadow-lg hover:scale-105 transition duration-300 mx-auto">
+          <!-- CARD -->
+          <div class="bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl px-8 py-10 text-center shadow-xl">
 
-            <!-- ICON -->
-            <img src="https://cdn-icons-png.flaticon.com/128/3731/3731748.png" alt="icon surat" class="w-5 h-5">
+            <p class="text-white text-sm mb-2 tracking-wide">
+              Kepada Yth.
+            </p>
 
-            Buka Undangan
-          </button>
+            <p class="text-white text-lg font-medium mb-6">
+              Tamu Undangan
+            </p>
+
+            <button id="openBtn"
+              class="flex items-center gap-2 px-6 py-3 rounded-full bg-white text-purple-700 font-medium shadow-lg hover:scale-105 transition duration-300 mx-auto">
+
+              <img src="https://cdn-icons-png.flaticon.com/128/3731/3731748.png" alt="icon surat" class="w-5 h-5">
+
+              Buka Undangan
+            </button>
+
+          </div>
 
         </div>
 
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- ================= CONTENT ================= -->
+    <section id="content" class="hidden">
 
-  <section id="content" class="hidden">
+      <!-- Section 2 -->
+      <div class="w-full min-h-screen overflow-hidden">
+        <video autoplay muted loop playsinline disablepictureinpicture
+          controlslist="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover">
+          <source src="section ke 2.mp4" type="video/mp4">
+        </video>
+      </div>
 
-    <!-- Section 2 -->
-    <div class="w-full max-w-[480px] mx-auto aspect-[9/16] overflow-hidden">
-      <video autoplay muted loop playsinline disablepictureinpicture
-        controlslist="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover">
-        <source src="section ke 2.mp4" type="video/mp4">
-      </video>
-    </div>
+      <!-- Section 3 -->
+      <div class="w-full min-h-screen overflow-hidden">
+        <video autoplay muted loop playsinline disablepictureinpicture
+          controlslist="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover">
+          <source src="section 3.mp4" type="video/mp4">
+        </video>
+      </div>
 
-    <!-- Section 3 -->
-    <div class="w-full max-w-[480px] mx-auto aspect-[9/16] overflow-hidden">
-      <video autoplay muted loop playsinline disablepictureinpicture
-        controlslist="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover">
-        <source src="section 3.mp4" type="video/mp4">
-      </video>
-    </div>
+      <!-- Section 4 -->
+      <div class="w-full min-h-screen overflow-hidden">
+        <video autoplay muted loop playsinline disablepictureinpicture
+          controlslist="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover">
+          <source src="section 4.mp4" type="video/mp4">
+        </video>
+      </div>
 
-    <!-- Section 4 -->
-    <div class="w-full max-w-[480px] mx-auto aspect-[9/16] overflow-hidden">
-      <video autoplay muted loop playsinline disablepictureinpicture
-        controlslist="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover">
-        <source src="section 4.mp4" type="video/mp4">
-      </video>
-    </div>
+    </section>
 
-  </section>
+  </div>
 
+  <!-- ================= SCRIPT ================= -->
   <script>
     const openBtn = document.getElementById("openBtn");
     const cover = document.getElementById("cover");
     const content = document.getElementById("content");
 
     openBtn.addEventListener("click", function () {
-      cover.remove(); // lebih bersih dari display none
+      cover.remove();
       content.classList.remove("hidden");
-
-      document.body.classList.remove("overflow-hidden");
-
-      // paksa ke atas
       window.scrollTo({ top: 0, behavior: "instant" });
     });
   </script>
