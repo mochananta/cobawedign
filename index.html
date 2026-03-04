@@ -18,6 +18,12 @@
       font-family: 'Inter', sans-serif;
     }
 
+    img,
+    video {
+      pointer-events: none;
+      user-select: none;
+    }
+
     .font-title {
       font-family: 'Playfair Display', serif;
     }
@@ -201,59 +207,60 @@
           <source src="section 5.mp4" type="video/mp4">
         </video>
 
-        <div class="relative z-10 flex flex-col items-center text-center min-h-[100svh] px-6 pt-[33vh] pb-16">
-          <p class="uppercase tracking-[4px] text-xs mb-6 text-black fade-item">
-            The Wedding Day
-          </p>
+        <div
+          class="relative z-10 flex flex-col items-center text-center min-h-[100svh] px-6 pt-[33vh] pb-16 font-['Montserrat']">
 
           <!-- Countdown -->
           <div id="countdown"
             class="grid grid-cols-4 gap-2 sm:gap-3 mb-10 fade-item text-black w-full max-w-xs sm:max-w-sm">
-
             <div class="bg-white/20 backdrop-blur-md rounded-xl py-3 sm:py-4 shadow-md">
-              <p id="days" class="text-lg sm:text-xl font-semibold">00</p>
-              <span class="text-[10px] sm:text-xs tracking-wide">Days</span>
+              <p id="days" class="text-lg sm:text-xl font-semibold">00</p> <span
+                class="text-[10px] sm:text-xs tracking-wide">Days</span>
             </div>
-
             <div class="bg-white/20 backdrop-blur-md rounded-xl py-3 sm:py-4 shadow-md">
-              <p id="hours" class="text-lg sm:text-xl font-semibold">00</p>
-              <span class="text-[10px] sm:text-xs tracking-wide">Hours</span>
+              <p id="hours" class="text-lg sm:text-xl font-semibold">00</p> <span
+                class="text-[10px] sm:text-xs tracking-wide">Hours</span>
             </div>
-
             <div class="bg-white/20 backdrop-blur-md rounded-xl py-3 sm:py-4 shadow-md">
-              <p id="minutes" class="text-lg sm:text-xl font-semibold">00</p>
-              <span class="text-[10px] sm:text-xs tracking-wide">Minutes</span>
+              <p id="minutes" class="text-lg sm:text-xl font-semibold">00</p> <span
+                class="text-[10px] sm:text-xs tracking-wide">Minutes</span>
             </div>
-
             <div class="bg-white/20 backdrop-blur-md rounded-xl py-3 sm:py-4 shadow-md">
-              <p id="seconds" class="text-lg sm:text-xl font-semibold">00</p>
-              <span class="text-[10px] sm:text-xs tracking-wide">Seconds</span>
+              <p id="seconds" class="text-lg sm:text-xl font-semibold">00</p> <span
+                class="text-[10px] sm:text-xs tracking-wide">Seconds</span>
             </div>
-
           </div>
 
           <div class="bg-white/20 backdrop-blur-md border border-white/30
-              rounded-3xl p-6 sm:p-8 shadow-xl space-y-6 
-              w-full max-w-xs sm:max-w-sm
-              fade-item text-black">
+        rounded-3xl p-6 sm:p-8 shadow-xl space-y-6 
+        w-full max-w-xs sm:max-w-sm
+        fade-item text-black">
 
             <div>
-              <h4 class="text-base sm:text-lg font-semibold text-purple-700">Akad Nikah</h4>
+              <h4 class="text-base sm:text-lg font-semibold font-['Playfair_Display'] text-[#c45a41]">
+                Akad Nikah
+              </h4>
               <p class="text-xs sm:text-sm mt-1">08.00 WIB</p>
             </div>
 
             <div>
-              <h4 class="text-base sm:text-lg font-semibold text-purple-700">Resepsi</h4>
+              <h4 class="text-base sm:text-lg font-semibold font-['Playfair_Display'] text-[#c45a41]">
+                Resepsi
+              </h4>
               <p class="text-xs sm:text-sm mt-1">11.00 WIB - Selesai</p>
             </div>
 
             <div>
-              <h4 class="text-base sm:text-lg font-semibold text-purple-700">Lokasi</h4>
+              <h4 class="text-base sm:text-lg font-semibold font-['Playfair_Display'] text-[#c45a41]">
+                Lokasi
+              </h4>
               <p class="text-xs sm:text-sm mt-1 mb-4">Gedung Serbaguna Bahagia</p>
 
-              <a href="https://maps.google.com" target="_blank" class="inline-block px-5 py-2 rounded-full bg-purple-600 
-                text-white text-xs sm:text-sm
-                shadow-md hover:scale-105 transition duration-300">
+              <a href="https://maps.google.com" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-600 
+          text-white text-xs sm:text-sm
+          shadow-md hover:scale-105 transition duration-300">
+
+                <img src="https://cdn-icons-png.flaticon.com/128/2776/2776063.png" alt="Maps" class="w-5 h-5">
                 Lihat di Google Maps
               </a>
             </div>
@@ -486,6 +493,23 @@
       navigator.clipboard.writeText(nomor);
       alert("Nomor rekening berhasil disalin");
     }
+  </script>
+
+  <script>
+    document.addEventListener("contextmenu", e => e.preventDefault());
+
+    document.addEventListener("dragstart", e => e.preventDefault());
+
+    document.addEventListener("keydown", function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && e.key === "I") ||
+        (e.ctrlKey && e.shiftKey && e.key === "J") ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        e.preventDefault();
+      }
+    });
   </script>
 
 </body>
