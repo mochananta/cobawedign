@@ -100,7 +100,7 @@
     </div>
 
     <audio id="bgMusic" loop>
-      <source src="Nadhif_Basalamah_-_kota_ini_tak_sama_tanpamu_Official_Lyric_Video_256kbps.webm" type="audio/webm">
+      <source src="original-sound-doriwirawan-music.mp3" type="audio/mpeg">
     </audio>
 
     <button id="musicBtn"
@@ -510,6 +510,17 @@
         e.preventDefault();
       }
     });
+  </script>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const guestName = urlParams.get("to");
+
+    if (guestName) {
+      document.querySelectorAll(".guest-name").forEach(el => {
+        el.textContent = decodeURIComponent(guestName);
+      });
+    }
   </script>
 
 </body>
